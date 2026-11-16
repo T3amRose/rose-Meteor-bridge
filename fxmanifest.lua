@@ -3,12 +3,13 @@ game 'gta5'
 lua54 'yes'
 
 name 'rose_Meteor_bridge'
-description 'Bridge: startet den Meteor-Sturm von gg_weathersystem zufaellig'
-version '0.1.0'
+description 'Bridge: zufaellige Meteor-Einschlaege mit Stein, Explosion und optional SmartFires fuer gg_weathersystem'
+version '1.0.0'
 
 dependency 'gg_weathersystem'
 
-server_scripts {
-    'config.lua',
-    'server.lua',
-}
+shared_script 'config.lua'
+
+server_script 'server.lua'
+
+client_script 'client.lua'
